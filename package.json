@@ -29,7 +29,7 @@
     "requires": {
       "[development]": {
         "auth": {
-          "kind": "basic",
+          "kind": "dummy",
           "users": {
             "incident.support@tester.sap.com": {
               "password": "initial",
