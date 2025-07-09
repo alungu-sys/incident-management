@@ -6,10 +6,10 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^9",
-    "express": "^4",
     "@cap-js/hana": "^2",
-    "@sap/xssec": "^4"
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4",
+    "express": "^4"
   },
   "engines": {
     "node": ">=20"
@@ -18,12 +18,13 @@
     "@cap-js/cds-test": "^0.4.0",
     "@cap-js/cds-types": "^0.11.0",
     "@cap-js/sqlite": "^2",
-    "@sap/cds-dk": ">=8"
+    "@sap/cds-dk": "^9.1.0"
   },
   "scripts": {
     "start": "cds-serve",
     "watch-incidents": "cds watch --open incidents/webapp/index.html?sap-ui-xx-viewCache=false",
-    "test": "npx jest tests/test.js"
+    "test": "npx jest tests/test.js",
+    "cds-build": "npm install --include=dev && cds build --production"
   },
   "cds": {
     "requires": {
